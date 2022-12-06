@@ -7,6 +7,9 @@ startbtn.addEventListener("click", () => {
         alert("Please field the input with numbers");
         return;
     }
+    semiCircles[0].style.display = "block";
+    semiCircles[1].style.display = "block";
+
     let setTime = input.value * 1000;
     let startTime = Date.now();
     let futureTime = startTime + setTime;
@@ -32,7 +35,7 @@ startbtn.addEventListener("click", () => {
         // timer
         const sec = Math.floor((remainingTime / 1000) % 60);
         timer.innerHTML = `
-  <div>${sec}</div>
+  <div class = "sec">${sec + 1}</div>
 `;
 
         //end

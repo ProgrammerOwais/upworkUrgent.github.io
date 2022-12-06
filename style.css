@@ -70,10 +70,12 @@
 .semi-circle:nth-child(1) {
     background-color: green;
     z-index: 2;
+    display: none;
 }
 .semi-circle:nth-child(2) {
     background-color: green;
     z-index: 3;
+    display: none;
 }
 .semi-circle:nth-child(3) {
     background-color: white;
@@ -100,6 +102,9 @@
 .timer {
     z-index: 100;
     font-weight: bold;
+}
+.sec {
+    font-size: 2rem;
 }
 .timer div {
     font-size: 1.2rem;
