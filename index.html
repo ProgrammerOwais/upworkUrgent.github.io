@@ -4,9 +4,31 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Upwork urgent</title>
+        <link rel="stylesheet" href="style.css" />
+        <title>time counter</title>
     </head>
     <body>
-        <h1>Hi there</h1>
+        <div class="timeinput">
+            <input
+                type="number"
+                class="input"
+                placeholder="enter the time in seconds"
+            />
+            <button type="button" class="btn">Start it</button>
+        </div>
+        <div class="main-container center">
+            <div class="circle-container center">
+                <div class="semi-circle"></div>
+                <div class="semi-circle"></div>
+                <div class="semi-circle"></div>
+                <div class="outer-most-circle"></div>
+            </div>
+            <div class="circle-container2 center"></div>
+            <!-- timer -->
+            <div class="timer-container center">
+                <div class="timer center"></div>
+            </div>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>
