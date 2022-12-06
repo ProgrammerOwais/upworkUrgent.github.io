@@ -27,6 +27,7 @@ startbtn.addEventListener("click", () => {
         const remainingTime = futureTime - currentTime;
         const angle = (remainingTime / setTime) * 360;
 
+        hideCircle.style.display = "none";
         // progress indicator
         if (angle > 180) {
             semiCircles[2].style.display = "none";
@@ -37,6 +38,7 @@ startbtn.addEventListener("click", () => {
             semiCircles[2].style.display = "block";
             semiCircles[0].style.transform = `rotate(-${angle}deg)`;
             semiCircles[1].style.transform = `rotate(-${angle}deg)`;
+
             hideCircle.style.display = "block";
         }
 

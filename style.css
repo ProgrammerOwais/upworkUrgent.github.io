@@ -81,6 +81,9 @@
     margin-left: 2.7rem;
     display: none;
 }
+.hide-circle-toggle {
+    display: block;
+}
 
 .semi-circle:nth-child(1) {
     width: 50%;
