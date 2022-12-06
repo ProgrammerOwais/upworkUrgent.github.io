@@ -7,8 +7,10 @@ startbtn.addEventListener("click", () => {
         alert("Please field the input with numbers");
         return;
     }
+
     semiCircles[0].style.display = "block";
     semiCircles[1].style.display = "block";
+    semiCircles[2].style.display = "block";
 
     let setTime = input.value * 1000;
     let startTime = Date.now();
@@ -25,17 +27,17 @@ startbtn.addEventListener("click", () => {
         if (angle > 180) {
             semiCircles[2].style.display = "none";
             semiCircles[0].style.transform = "rotate(180deg)";
-            semiCircles[1].style.transform = `rotate(${angle}deg)`;
+            semiCircles[1].style.transform = `rotate(-${angle}deg)`;
         } else {
             semiCircles[2].style.display = "block";
-            semiCircles[0].style.transform = `rotate(${angle}deg)`;
-            semiCircles[1].style.transform = `rotate(${angle}deg)`;
+            semiCircles[0].style.transform = `rotate(-${angle}deg)`;
+            semiCircles[1].style.transform = `rotate(-${angle}deg)`;
         }
 
         // timer
-        const sec = Math.floor((remainingTime / 1000) % 60);
+        const sec = Math.floor(remainingTime / 1000);
         timer.innerHTML = `
-  <div class = "sec">${sec + 1}</div>
+  <div> <p class = "time">${sec + 1}</p></div>
 `;
 
         //end
@@ -45,7 +47,7 @@ startbtn.addEventListener("click", () => {
             semiCircles[1].style.display = "none";
             semiCircles[2].style.display = "none";
             timer.innerHTML = `
-  <div>0</div>
+  <div><p class = "time">0</p></div>
 `;
         }
     }
