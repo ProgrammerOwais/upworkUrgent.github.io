@@ -1,6 +1,10 @@
 let semiCircles = document.querySelectorAll(".semi-circle");
 let input = document.querySelector(".input");
 let startbtn = document.querySelector(".btn");
+let hideCircle = document.querySelector(".hide-circle");
+
+// semiCircles[0].style.display = "block";
+// semiCircles[2].style.display = "block";
 
 startbtn.addEventListener("click", () => {
     if (input.value == "" || input.value == 0) {
@@ -28,10 +32,12 @@ startbtn.addEventListener("click", () => {
             semiCircles[2].style.display = "none";
             semiCircles[0].style.transform = "rotate(180deg)";
             semiCircles[1].style.transform = `rotate(-${angle}deg)`;
+            semiCircles[1].style.opacity = "1";
         } else {
             semiCircles[2].style.display = "block";
             semiCircles[0].style.transform = `rotate(-${angle}deg)`;
             semiCircles[1].style.transform = `rotate(-${angle}deg)`;
+            hideCircle.style.display = "block";
         }
 
         // timer
